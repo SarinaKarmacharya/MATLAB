@@ -1,4 +1,4 @@
-% cd  /rfanfs/pnl-zorro/Collaborators/CMA/DICOM/fDTI_50mins_R2
+
 
 addpath /rfanfs/pnl-zorro/software/
 input_file_path = ('/rfanfs/pnl-zorro/Collaborators/CMA/DICOM/fDTI_50mins_R2/scannerDrift/dwi-Ed.nhdr');
@@ -44,7 +44,7 @@ dice_path = ('/rfanfs/pnl-zorro/Collaborators/CMA/DICOM/fDTI_50mins_R2/scannerDr
     end
         
     % LINEAR LEAST SQUARE FIT
-    % http://stackoverflow.com/questions/27092203/how-do-i-determine-the-coefficients-for-a-linear-regression-line-in-matlab
+
     
     load  bo_intensity;
     
