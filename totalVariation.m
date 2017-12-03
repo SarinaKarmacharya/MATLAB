@@ -2,14 +2,24 @@ clear
 I=imread('1.tif');
 k=imread('CB_Atlas_181_BAMBAM/1_181_CB.png');
 
+%[a,b,c]=size(I);
+%l=imresize(k, [a,b]);
+%o=imshowpair(I, l, 'blend');
+%h_im=imshow(l);
 
+%figure(1), imagesc(I)
+
+%next step
+
+%h=imfreehand(); 
 [a,b,c]=size(I);
 IG=rgb2gray(k);
 CB=((IG==133)==1);
 CB(~IG==133)=0;
 binaryImage2=bwareaopen(CB,18);
 binaryImage=imresize(binaryImage2, [a,b]);
-
+%binaryImage=h.createMask();
+%numberOfPixel1=sum(binaryImage(:));
 structBoundaries = bwboundaries(binaryImage);
 xy=structBoundaries{1};
 x=xy(:, 2);y=xy(:, 1);
@@ -57,7 +67,7 @@ figure(10); imagesc(Txx+Tyy);
 [Fxx,Fyx]=gradient(FX);
 [Fxy, Fyy]=gradient(FY);
 hessianF=sqrt(Fxx.^2 + Fyx.^2 + Fxy.^2 + Fyy.^2);
-
+%namblaF=abs(FX)+abs(FY);
 namblaF=sqrt(FX.^2 + FY.^2);
 
 structureF=(2*hessianF) + namblaF;

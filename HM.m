@@ -1,4 +1,4 @@
-I=imread('/rfanfs/pnl-zorro/home/sarina/Histology/181_BAMBAM/1.tif');
+I=imread('/rfanfs/pnl-zorro/projects/Kubicki_SCZ_R01/Monkey_AM034_LN3_Scans/1.tif');
 I=im2double(I);
 [a,b,c]=size(I);
 l=imresize(k, [a,b]);
@@ -10,11 +10,10 @@ patch=I(rect(2):rect(2)+rect(4),rect(1):rect(1)+rect(3),:);
 figure(2);imshow(patch)
 
 
-cd /rfanfs/pnl-zorro/home/sarina/Histology/181_BAMBAM/
+cd /rfanfs/pnl-zorro/projects/Kubicki_SCZ_R01/Monkey_AM034_LN3_Scans/
 clear
-I=imread('2.tif');
-I=imread('BAMBAM/BAMBAM2.png');
-I=im2double(I);
+I=imread('1.tif');
+k=imread('atlas/Nathan1.png');
 [a,b,c]=size(I);
 l=imresize(k, [a,b]);
 o=imshowpair(I, l, 'blend');
@@ -90,4 +89,8 @@ numberOfPixel1=sum(binaryImage(:));
 numberOfPixel1
 %h=find(binaryImage == 1);
 %area=length(h);
+
+
+
+
 
