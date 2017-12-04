@@ -1,4 +1,4 @@
-%cd  /rfanfs/pnl-zorro/Collaborators/CMA/DICOM/fDTI_50mins_R2
+
 
 addpath /rfanfs/pnl-zorro/software/
 addpath /projects/schiz/pi/lipeng/matlab/routines/toolbox_matlab_nifti/
@@ -67,21 +67,13 @@ cd tmp
         
         b01=MRIread(niiFile);
         
-        %im=MRIread('/rfanfs/pnl-zorro/Collaborators/CMA/DICOM/fDTI_50mins_R2/tensor_mask.nii.gz');
-        
-        %tmp=b0.vol.*im.vol;
-        
-        %tmp=G.vol[nx, ny, nz];
+
         
         corrected_file = [(b01.vol+difference(j))];
        
          dwi.data(:,:,:,j)=corrected_file;
        
-       %MRIwrite(b0, niiFile);
-       
-       %system(['ConvertBetweenFileFormats ' ' ' niiFile ' ' nrrdFile ]);
-       
-       %system(['rm ' niiFile]);
+
      end
      
     end
@@ -93,7 +85,7 @@ cd tmp
     
     
     % LINEAR LEAST SQUARE FIT
-    %http://stackoverflow.com/questions/27092203/how-do-i-determine-the-coefficients-for-a-linear-regression-line-in-matlab
+
    if 0
        
     x(1)=1;
@@ -135,7 +127,7 @@ cd tmp
    for i =1:length(x1)
        
         difference_values(i)=MaxValue-y3(i);
-        %sqrt((MaxValue-y3(i)).^2);
+      
     
    end
     plot(x1, y3)
@@ -151,11 +143,7 @@ cd tmp
    
    
    end
-  
-   %x=(MeanSignalIntensity(:))
-    %x= (1:N)'
 
-    %plot(MeanSignalIntensity(~isnan(MeanSignalIntensity)));
     
     
   
