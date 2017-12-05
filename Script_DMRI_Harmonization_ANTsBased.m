@@ -1,30 +1,5 @@
 function Script_DMRI_Harmonization_ANTsBased(Inputs)
 
-
-
-
-% mkdir('/rfanfs/pnl-zorro/home/hengameh/ANTsBasedTemplates')
-% for cc=1:7
-%     for T_number=0:4
-%         %system(['cp /rfanfs/pnl-zorro/home/hengameh/Save_For_ANTs/MyImgs/All_sites/Median3_site' num2str(cc) '_'  num2str(T_number)  '.nii ' ...
-%         %   ' /rfanfs/pnl-zorro/home/hengameh/ANTsBasedTemplates/Median3_site' num2str(cc) '_'  num2str(T_number)  '.nii '])
-%         %system(['ConvertBetweenFileFormats    /rfanfs/pnl-zorro/home/hengameh/ANTsBasedTemplates/Median3_site' num2str(cc) '_'  num2str(T_number)  '.nii '  ...
-%         %        ' /rfanfs/pnl-zorro/home/hengameh/ANTsBasedTemplates/Median3_site' num2str(cc) '_'  num2str(T_number)  '.nii.gz '   ])
-%
-%         system(['cp /rfanfs/pnl-zorro/home/hengameh/Save_For_ANTs/MyImgs/All_sites/Delta3Median_site' num2str(cc) '_L'  num2str(T_number+1)  '.nii ' ...
-%             ' /rfanfs/pnl-zorro/home/hengameh/ANTsBasedTemplates/Delta3Median_site' num2str(cc) '_L'  num2str(T_number+1)   '.nii '])
-%         system(['ConvertBetweenFileFormats  '  ' /rfanfs/pnl-zorro/home/hengameh/ANTsBasedTemplates/Delta3Median_site' num2str(cc) '_L'  num2str(T_number+1)   '.nii '...
-%             ' /rfanfs/pnl-zorro/home/hengameh/ANTsBasedTemplates/Delta3Median_site' num2str(cc) '_L'  num2str(T_number+1)   '.nii.gz '])
-%
-%         system(['rm   /rfanfs/pnl-zorro/home/hengameh/ANTsBasedTemplates/Delta3Median_site' num2str(cc) '_L'  num2str(T_number+1)   '.nii '])
-%     end
-% end
-%
-%
-
-
-
-
 addpath('/projects/schiz/Collaborators/hengameh/Codes')
 mapping_type=[1 ];
 option.mapping_type=mapping_type;
