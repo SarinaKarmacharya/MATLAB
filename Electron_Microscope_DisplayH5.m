@@ -1,6 +1,6 @@
 info = hdf5info('ecs_test_pixel_half_valid_312_32_14500.h5');
 
-%% Find the addres of the image
+%% Find the address of the image
 
 % The operation must be done manually and the position inside the structure
 
